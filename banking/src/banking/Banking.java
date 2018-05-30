@@ -7,12 +7,19 @@ public class Banking
     double accno;
     double bal;
     
-    
+    /**
+     * this method deposits the amount to the specified account.
+     * @param damt this is the amount to be deposited.
+     */
     void deposit(double damt)
     {
         bal+=damt;
     }
     
+    /**
+     * this method withdraws the amount from the specified account.
+     * @param wamt this is the amount to be withdrawn.
+     */
     void withdraw(double wamt)
     {
         if(bal>wamt)
@@ -21,6 +28,9 @@ public class Banking
             System.out.println("Insufficient balance");
     }
     
+    /**
+     * this methods displays the balance in the account
+     */
     void disp()
     {
         System.out.println("Bal = "+bal);
@@ -32,6 +42,10 @@ public class Banking
         c=0;
         Scanner inp = new Scanner(System.in);
        Banking[] a = new Banking[20];
+       
+       /**
+        * creating the bank objects
+        */
        for(i=0;i<a.length;i++)
        {
            a[i]=new Banking();
@@ -47,6 +61,9 @@ public class Banking
        
        switch(ch)
        {
+           /**
+            * case 1 is used to create the account.
+            */
            case 1:{ 
                     System.out.println("Enter the account number ");
                     int acc = inp.nextInt();
@@ -68,6 +85,9 @@ public class Banking
                         
                    }
            
+           /**
+            * case 2 is used to deposit the amount to the specified account.
+            */
            case 2:{ 
                     System.out.println("Enter the account number ");
                     int acc = inp.nextInt();
@@ -89,6 +109,10 @@ public class Banking
                            break;
                         
                    }
+           
+           /**
+            * case 3 is used to withdraw the amount from the specified account.
+            */
            case 3: {    
                        System.out.println("Enter the account number ");
                     int acc = inp.nextInt();
@@ -110,6 +134,10 @@ public class Banking
                            break;
                         
                    } 
+           
+           /**
+            * case 4 is used to transfer the amount from one account to another account.
+            */
             case 4: {
                     System.out.println("Enter the account number from which you want to transfer ");
                     int acc1 = inp.nextInt();
@@ -146,6 +174,10 @@ public class Banking
                         
                    
                     }
+            
+            /**
+             * case 5 is used to calculate the total amount remaining in the bank.
+             */
             case 5:{
                         double totamt=0;
                         for(i=0;i<a.length;i++)
@@ -157,6 +189,10 @@ public class Banking
                         break;
                 
                     }
+            
+            /**
+             * case 6 is used to find out the richest person in the bank.
+             */
             case 6:{
                         double largebal=0;
                         int j=0;
@@ -174,6 +210,9 @@ public class Banking
                 
                     }
             
+            /**
+             * case 7 exits from the program.
+             */
             case 7: break exit;
             
                   
