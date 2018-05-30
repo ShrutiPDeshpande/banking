@@ -2,33 +2,7 @@
 package banking;
 import java.util.Scanner;
 
- class Account 
-{
-    double accno;
-    double bal;
-    public static int count=0;
-    
-    
-    Account(double acc, double balan)
-    {
-        accno=acc;
-        bal=balan;
-        count++;
-    }
-    
-    void deposit(double damt)
-    {
-        bal+=damt;
-    }
-    
-    void withdraw(double wamt)
-    {
-        bal-=wamt;    
-    }
-    
-    
-}
-
+ 
 
 public class Banking 
 {
@@ -48,7 +22,7 @@ public class Banking
                     System.out.println("Enter the account number ");
                     int acc = inp.nextInt();
                     int i;
-                    for(i=0;i<count;i++)
+                    for(i=0;i<Account.count;i++)
                     {
                         if(a[i].accno==acc)
                         {
@@ -57,7 +31,10 @@ public class Banking
                         }
                     }
                     
-               
+                        if(i==Account.count)
+                        {
+                            
+                        }
                    }
        }
     }
