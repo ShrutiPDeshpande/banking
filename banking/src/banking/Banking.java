@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Banking 
 {
-    double accno;
-    double bal;
+    public double accno;
+    public double bal;
     
     /**
      * this method deposits the amount to the specified account.
      * @param damt this is the amount to be deposited.
      */
-    void deposit(double damt)
+    public void deposit(double damt)
     {
         bal+=damt;
     }
@@ -20,7 +20,7 @@ public class Banking
      * this method withdraws the amount from the specified account.
      * @param wamt this is the amount to be withdrawn.
      */
-    void withdraw(double wamt)
+    public void withdraw(double wamt)
     {
         if(bal>wamt)
         bal-=wamt; 
@@ -31,7 +31,7 @@ public class Banking
     /**
      * this methods displays the balance in the account
      */
-    void disp()
+    public void disp()
     {
         System.out.println("Bal = "+bal);
     }
@@ -41,7 +41,7 @@ public class Banking
         int i,c;
         c=0;
         Scanner inp = new Scanner(System.in);
-       Banking[] a = new Banking[20];
+        Banking[] a = new Banking[20];
        
        /**
         * creating the bank objects
